@@ -1,0 +1,30 @@
+{
+  "name": "quantity-queries.less",
+  "version": "0.1.0",
+  "authors": [
+    "Anders D. Johnson"
+  ],
+  "description": "Quantity queries mixins for LESS",
+  "main": "quantity-queries.less",
+  "keywords": [
+    "less",
+    "css",
+    "quantity",
+    "queries",
+    "query",
+    "nth-last-child"
+  ],
+  "homepage": "https://github.com/AndersDJohnson/quantity-queries.less",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AndersDJohnson/quantity-queries.less.git"
+  },
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

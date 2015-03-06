@@ -1,0 +1,25 @@
+@import "quantity-queries";
+
+span {
+    .exactly(2, {
+        background: green;
+    })
+};
+
+span {
+    .at-most(3, {
+        color: red;
+    })
+};
+
+span {
+    .at-least(3, {
+        background: cyan;
+    })
+};
+
+span {
+    .between(4, 5, {
+        color: purple;
+    })
+};

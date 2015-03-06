@@ -1,0 +1,27 @@
+
+._build-quantity-selector(@selector) {
+    &@{selector},
+    &@{selector} ~ & {
+        @rules();
+    }
+}
+
+.exactly(@count, @rules) {
+    @selector: e(":nth-last-child(@{count}):first-child");
+    ._build-quantity-selector(@selector);
+}
+
+.at-least(@count, @rules) {
+    @selector: e(":nth-last-child(n+@{count})");
+    ._build-quantity-selector(@selector);
+}
+
+.at-most(@count, @rules) {
+    @selector: e(":nth-last-child(-n+@{count}):first-child");
+    ._build-quantity-selector(@selector);
+}
+
+.between(@first, @last, @rules) {
+    @selector: e(":nth-last-child(n+@{first}):nth-last-child(-n+@{last}):first-child");
+    ._build-quantity-selector(@selector);
+}
