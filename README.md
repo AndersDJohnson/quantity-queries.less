@@ -27,26 +27,26 @@ In your LESS, import the LESS file:
 Then use the mixins, e.g.:
 
 ```less
-span {
+div > span {
     .exactly(2, span, {
         background: green;
     });
 };
 
 
-span {
+div > span {
     .at-most(3, span, {
         color: red;
     });
 };
 
-span {
+div > span {
     .at-least(3, span, {
         background: cyan;
     });
 };
 
-span {
+div > span {
     .between(4, 5, span, {
         color: purple;
     });
