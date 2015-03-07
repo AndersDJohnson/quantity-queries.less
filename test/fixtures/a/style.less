@@ -7,6 +7,15 @@ span {
 };
 
 span {
+    .exactly(2, span, {
+        &:after {
+            background: white;
+            content: '(=2)';
+        }
+    });
+};
+
+span {
     .at-most(3, span, {
         color: red;
     });
@@ -18,8 +27,20 @@ span {
     });
 };
 
-span {
-    .between(4, 5, span, {
+span.sp {
+    .between(4, 5, ~"span.sp", {
+        text-decoration: underline;
+    });
+};
+
+span.sp {
+    .between(3, 4, ~'span.sp', {
+        font-style: italic;
+    });
+};
+
+span.sp {
+    .between(4, 5, e('span.sp'), {
         color: purple;
     });
 };

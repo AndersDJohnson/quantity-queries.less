@@ -2,6 +2,11 @@ span:nth-last-child(2):first-child,
 span:nth-last-child(2):first-child ~ span {
   background: green;
 }
+span:nth-last-child(2):first-child:after,
+span:nth-last-child(2):first-child ~ span:after {
+  background: white;
+  content: '(=2)';
+}
 span:nth-last-child(-n+3):first-child,
 span:nth-last-child(-n+3):first-child ~ span {
   color: red;
@@ -10,7 +15,15 @@ span:nth-last-child(n+3),
 span:nth-last-child(n+3) ~ span {
   background: cyan;
 }
-span:nth-last-child(n+4):nth-last-child(-n+5):first-child,
-span:nth-last-child(n+4):nth-last-child(-n+5):first-child ~ span {
+span.sp:nth-last-child(n+4):nth-last-child(-n+5):first-child,
+span.sp:nth-last-child(n+4):nth-last-child(-n+5):first-child ~ span.sp {
+  text-decoration: underline;
+}
+span.sp:nth-last-child(n+3):nth-last-child(-n+4):first-child,
+span.sp:nth-last-child(n+3):nth-last-child(-n+4):first-child ~ span.sp {
+  font-style: italic;
+}
+span.sp:nth-last-child(n+4):nth-last-child(-n+5):first-child,
+span.sp:nth-last-child(n+4):nth-last-child(-n+5):first-child ~ span.sp {
   color: purple;
 }
