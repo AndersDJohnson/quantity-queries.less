@@ -24,26 +24,26 @@ Then use the mixins, e.g.:
 
 ```less
 span {
-    .exactly(2, {
+    .exactly(2, span, {
         background: green;
     });
 };
 
 
 span {
-    .at-most(3, {
+    .at-most(3, span, {
         color: red;
     });
 };
 
 span {
-    .at-least(3, {
+    .at-least(3, span, {
         background: cyan;
     });
 };
 
 span {
-    .between(4, 5, {
+    .between(4, 5, span, {
         color: purple;
     });
 };
