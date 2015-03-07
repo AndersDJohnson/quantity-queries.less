@@ -1,27 +1,27 @@
 
-._build-quantity-selector(@selector) {
-    &@{selector},
-    &@{selector} ~ & {
+._build-quantity-selector(@selector-append, @selector-sibling) {
+    &@{selector-append},
+    &@{selector-append} ~ @{selector-sibling} {
         @rules();
     }
 }
 
-.exactly(@count, @rules) {
-    @selector: e(":nth-last-child(@{count}):first-child");
-    ._build-quantity-selector(@selector);
+.exactly(@count, @selector-sibling, @rules) {
+    @selector-append: e(":nth-last-child(@{count}):first-child");
+    ._build-quantity-selector(@selector-append, @selector-sibling);
 }
 
-.at-least(@count, @rules) {
-    @selector: e(":nth-last-child(n+@{count})");
-    ._build-quantity-selector(@selector);
+.at-least(@count, @selector-sibling, @rules) {
+    @selector-append: e(":nth-last-child(n+@{count})");
+    ._build-quantity-selector(@selector-append, @selector-sibling);
 }
 
-.at-most(@count, @rules) {
-    @selector: e(":nth-last-child(-n+@{count}):first-child");
-    ._build-quantity-selector(@selector);
+.at-most(@count, @selector-sibling, @rules) {
+    @selector-append: e(":nth-last-child(-n+@{count}):first-child");
+    ._build-quantity-selector(@selector-append, @selector-sibling);
 }
 
-.between(@first, @last, @rules) {
-    @selector: e(":nth-last-child(n+@{first}):nth-last-child(-n+@{last}):first-child");
-    ._build-quantity-selector(@selector);
+.between(@first, @last, @selector-sibling, @rules) {
+    @selector-append: e(":nth-last-child(n+@{first}):nth-last-child(-n+@{last}):first-child");
+    ._build-quantity-selector(@selector-append, @selector-sibling);
 }
