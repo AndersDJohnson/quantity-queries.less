@@ -6,6 +6,10 @@ Learn more about quantity queries in [this A List Apart article](http://alistapa
 
 Inspired by [danielguillan/quantity-queries](https://github.com/danielguillan/quantity-queries) for SASS.
 
+## Demos
+* https://rawgit.com/AndersDJohnson/quantity-queries.less/master/test/fixtures/demo/index.html
+* https://rawgit.com/AndersDJohnson/quantity-queries.less/master/test/fixtures/a/index.html
+
 ## Install
 
 ```sh
